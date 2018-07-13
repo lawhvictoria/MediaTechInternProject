@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Media Tech Intern Project",
+  "verson": "0.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.nbc.com/this-is-us*",
+        "http://www.nbc.com/this-is-us*",
+        "https://www.imdb.com/title/tt5555260/*",
+        "https://en.wikipedia.org/wiki/This_Is_Us_(TV_series)*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background_script.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "",
+    "default_popup": "",
+    "default_title": ""
+  }
+}
