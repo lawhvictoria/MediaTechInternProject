@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Progress Bar</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./progressbar.js"></script>
+
+    <style type="text/css">
+        #container {
+            margin: 20px;
+            width: 200px;
+            height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <script type="text/javascript">
+        var bar = new ProgressBar.SemiCircle(container, {
+            strokeWidth: 6,
+            color: '#FFEA82',
+            trailColor: '#eee',
+            trailWidth: 1,
+            easing: 'easeInOut',
+            duration: 1400,
+            svgStyle: null,
+            text: {
+                value: '',
+                alignToBottom: false
+            },
+            from: {color: '#FFEA82'},
+            to: {color: '#00FF00'},
+            // Set default step function for all animate calls
+            step: (state, bar) => {
+                bar.path.setAttribute('stroke', state.color);
+                var value = Math.round(bar.value() * 600) + '\nPoints'; // 600 max Fandango points
+                if (value === 0) {
+                    bar.setText('');
+                } else {
+                    bar.setText(value);
+                }
+
+                bar.text.style.color = state.color;
+            }
+        });
+        bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+        bar.text.style.fontSize = '2rem';
+
+        // Fandango points total / max available points
+        var points =  540/600;
+
+        // Number from 0.0 to 1.0
+        bar.animate(points);
+    </script>
+</body>
+</html>
