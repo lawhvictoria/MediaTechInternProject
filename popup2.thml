@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Media Tech Intern Project 2018</title>
-    <script src="content.js"></script>
+    <script src="popup.js"></script>
     <style>
       .button {
         background-color: #04175F;
@@ -29,18 +29,13 @@
 </style>
   </head>
   <body>
-
-	<h1 style="font-size:40px;color: #04175F;text-align:center">Congratulations!</h1>
-	<h1 style="font-size:30px;color: #000000;text-align:center">
-    You've unlocked<br />
-    <img src="jurassic.png" style="width:212px;height:150px;"><br />
-    trivia!<br />
-    Press continue to play.
-  </h1>
-    <center>
-    <a href = "q1.html"><button class="button big-btn">Continue</button></a>
+    <h1 style="font-size:30px;color: #000000;text-align:center">
+        <img src="jurassic.png" style="width:212px;height:150px;"><br />
+    </h1>
+<!--     <center>
+    <button onclick="location.href = '/popup2.html';" class="button big-btn">Continue</button>
     <br />
-    <p id="demo"><a href="https://www.fandango.com/account/joinnow"><button class="button small-btn" onclick="openNewTab()">Create Account</button></a></p>
-    </center>
+    <button class="button small-btn">Create Account</button>
+    </center> -->
   </body>
 </html>

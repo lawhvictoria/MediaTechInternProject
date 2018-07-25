@@ -1,21 +1,17 @@
 var correctAnswer = 0;
 
 document.addEventListener('DOMContentLoaded', function () {
-    var links = document.getElementById("demo");
+    var links = document.getElementsByTagName('p');
     for (var i = 0; i < links.length; i++) {
         (function () {
             var ln = links[i];
-            var location = ln.href;
+            var location = "https://www.fandango.com/account/joinnow";
             ln.onclick = function () {
                 chrome.tabs.create({active: true, url: location});
             };
         })();
     }
 });
-
-function openNewTab() {
-var links = document.getElementById("demo");
-chrome.tabs.create({active: true, url: location});
 
 function submitFirstAnswer() {
   var radios = document.getElementsByName("choice");
