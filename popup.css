@@ -1,0 +1,25 @@
+body 
+{
+	background-image:url(Gradient1.jpg);
+	background-size:100%;	
+}
+
+::-webkit-scrollbar 
+{ 
+	width:0 !important 
+}
+
+h1
+{
+	text-align:center;
+}
+
+
+div input
+{
+	display:block;
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+}
+

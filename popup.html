@@ -1,46 +1,60 @@
 <!doctype html>
 <html>
-  <head>
-    <title>Media Tech Intern Project 2018</title>
-    <script src="content.js"></script>
-    <style>
-      .button {
-        background-color: #04175F;
-        color: #FFFFFF;
-        padding: 10px;
-        border-radius: 10px;
-        -moz-border-radius: 10px;
-        -webkit-border-radius: 10px;
-        margin:5px;
-        text-align: center;
-    }
-    
-    .small-btn {
-        font-size: 20px;
-        width: 200px;
-        height: 40px;
-    }
-    
-    .big-btn {
-        font-size: 40px;
-        width: 250px;
-        height: 60px;
-    }
-</style>
-  </head>
-  <body>
+<head>
+<meta charset="utf-8">
+<title>background</title>
+<link href="popup.css" rel="stylesheet" type="text/css">
+<script src="https://apis.google.com/youtube/v3"></script>
+<script src="https://apis.google.com/js/client.js"></script> 
+<!--TODO: We need APIs to grab the video duration, it doesn't work with event listeners alone.-->
+</head>
 
-	<h1 style="font-size:40px;color: #04175F;text-align:center">Congratulations!</h1>
-	<h1 style="font-size:30px;color: #000000;text-align:center">
-    You've unlocked<br />
-    <img src="jurassic.png" style="width:212px;height:150px;"><br />
-    trivia!<br />
-    Press continue to play.
-  </h1>
-    <center>
-    <a href = "q1.html"><button class="button big-btn">Continue</button></a>
-    <br />
-    <p id="demo"><a href="https://www.fandango.com/account/joinnow"><button class="button small-btn" onclick="openNewTab()">Create Account</button></a></p>
-    </center>
-  </body>
+<body>
+	
+	<div id="pointsAni">
+
+			<h1>POINTS GO HERE</h1>
+			<!--POINTS GO HERE-->
+			</div> <!--End of Points Animation-->
+			
+			<div id="fandangoHome">
+		
+			<!--Image/Gif here-->
+			<input type ="image" alt="mtimes_img" src="tickets.png" name="browse"><br />
+			<form action= "https://www.fandango.com/10001_movietimes?source=web_flydown_join" target="_blank">
+			<input type="image" alt="mtimes" src="Showtimes.png" name="fanHome">
+			</form><br />
+			</div>
+
+			<div id="nowHome">
+			
+			<!--Image/Gif Here-->
+			<input type ="image" alt="fanow_img" src="fannow.PNG" name="home"><br />
+			<form action="https://www.fandangonow.com/" target="_blank">
+			<input type="image" alt="fanow" src="FandangoNow.png" name="fanNow">
+			</form><br />	
+			</div>
+			
+			<div id="shopHome">
+
+			<!--Image/Gif Here-->
+			<input type ="image" alt="fshop_img" src="shop.png" name="swag"><br />
+			<form action="https://www.fandangofanshop.com/" target="_blank"> 
+			<input type="image" alt="fshop" src="FanShop.png" name="fanShop">
+			</form><br />
+
+			</div>
+			
+			<div id="clipsYT">
+
+			<!--Image/Gif Here-->
+			<input type ="image" alt="trailers_img" src="trailers.PNG" name="trailers"><br />
+			<form action="https://www.youtube.com/user/movieclipsTRAILERS" target="_blank">
+			<input type="image" alt="mclips" src="movieclips.png" name="movieClips">
+			</form>
+			</div>
+	
+
+	
+</body>
 </html>

@@ -1,0 +1,39 @@
+//JSON
+{
+	"name": "Video point counter test",
+	"version": "1.0",
+	"description": "Playing a video related to Jurassic World on NBC/YouTube should add points",
+	"content_scripts": [ {
+		"matches": [
+			"*://*.youtube.com/*", //For testing purposes. 
+			"https://www.youtube.com/watch?v=1FJD7jZqZEk", //Jurassic World Trailer
+			"https://www.youtube.com/watch?v=s2vc56qtzGE" //Jurassic World Review
+			
+		],
+		
+		"js" : [
+			"content.js"
+		],
+		
+		"all frames": "true",
+		"run_at": "document_end"
+		
+	}],
+	
+	"background": {
+		"scripts": ["Jurassic.js"],
+		"persistent": false
+	},
+	
+	"browser_action": {
+		"default_popup": "popup.html"
+	},
+	
+	"permissions": [ "activeTab", "tabs", "declarativeContent", "https://youtube.com/", "https://nbc.com/", "https://www.googleapis.com/*", "https://www.googleapis.com/youtube/v3/*" //TODO: How do we get the APIs to work? 
+		
+	],
+	
+	"manifest_version": 2
+	
+	
+}
